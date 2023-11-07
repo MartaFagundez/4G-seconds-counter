@@ -1,14 +1,16 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Proptypes from "prop-types";
 import SecondsCounter from "./seconds-counter";
 
 //create your first component
-const Home = () => {
+const Home = ({seconds}) => {
 	return (
-		<SecondsCounter></SecondsCounter>
+		<SecondsCounter seconds={seconds}></SecondsCounter>
 	);
 };
+
+Home.propTypes = {
+	seconds: Proptypes.number
+}
 
 export default Home;
